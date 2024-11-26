@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Utama</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://www.mercedes-benz.com/en/_jcr_content/root/heroleftcopy/slider/sliderchilditems/slideritem/image/MQ6-12-image-20211014130943/mercedes-amg-gt.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .ui.container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 50px;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="ui menu inverted">
+    <a class="item" href="index.html">Beranda</a>
+    <a class="item" href="#" onclick="logout()">Logout</a>
+  </div>
+
+  <!-- Menu Utama -->
+  <div class="ui container">
+    <h2 class="ui header">Selamat datang di Mercedes-Benz Indonesia!</h2>
+    <p>Anda telah berhasil login. Silakan gunakan menu di atas untuk navigasi lebih lanjut.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>@Copyright by NPM_John Doe_Kelas A</p>
+  </footer>
+
+  <script>
+    function logout() {
+      alert('Anda telah logout.');
+      window.location.href = 'login.html'; // Arahkan ke halaman login
+    }
+  </script>
+
+</body>
+</html>

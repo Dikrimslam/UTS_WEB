@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://www.mercedes-benz.com/en/_jcr_content/root/heroleftcopy/slider/sliderchilditems/slideritem/image/MQ6-12-image-20210414141008/eqs-header.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .ui.container {
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 50px;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="ui menu inverted">
+    <a class="item" href="index.html">Beranda</a>
+    <a class="item" href="login.html">Login</a>
+  </div>
+
+  <!-- Registrasi Form -->
+  <div class="ui container">
+    <h2 class="ui header">Registrasi</h2>
+    <form id="registerForm" class="ui form">
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="regEmail" placeholder="Masukkan Email">
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="regPassword" placeholder="Masukkan Password">
+      </div>
+      <button class="ui blue button" type="button" onclick="register()">Registrasi</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>@Copyright by NPM_John Doe_Kelas A</p>
+  </footer>
+
+  <script>
+    function register() {
+      const email = document.getElementById('regEmail').value;
+      const password = document.getElementById('regPassword').value;
+
+      // Simpan data ke Local Storage
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPassword', password);
+
+      alert('Registrasi berhasil! Silakan login.');
+      window.location.href = 'login.html'; // Arahkan ke halaman login
+    }
+  </script>
+
+</body>
+</html>
